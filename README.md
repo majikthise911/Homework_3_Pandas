@@ -4,7 +4,7 @@
 
 
 
-For this homework assignment, you have three main tasks:
+three main tasks:
 
 1. [Read in and Wrangle Returns Data](#Prepare-the-Data)
 
