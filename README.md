@@ -14,16 +14,14 @@ three main tasks:
 
 ---
 
-## Instructions
 
-**File:** [Whale Analysis Starter Code](Starter_Code/whale_analysis.ipynb)
 
 
 ### Prepare the Data
 
-First, read and clean several CSV files for analysis. The CSV files include whale portfolio returns, algorithmic trading portfolio returns, and S&P 500 historical prices. Use the [Whale Analysis Starter Code](Starter_Code/whale_analysis.ipynb) to complete the following steps:
+First, read and cleaned several CSV files for analysis. The CSV files include whale portfolio returns, algorithmic trading portfolio returns, and S&P 500 historical prices. 
 
-1. Use Pandas to read the following CSV files as a DataFrame. Be sure to convert the dates to a `DateTimeIndex`.
+1. Used Pandas to read the following CSV files as a DataFrame. 
 
     * `whale_returns.csv`: Contains returns of some famous "whale" investors' portfolios.
 
@@ -31,68 +29,66 @@ First, read and clean several CSV files for analysis. The CSV files include whal
 
     * `sp500_history.csv`: Contains historical closing prices of the S&P 500 Index.
 
-2. Detect and remove null values.
+2. Detected and removed null values.
 
-3. If any columns have dollar signs or characters other than numeric values, remove those characters and convert the data types as needed.
+3. Removeed dollar sign characters and converted the data types as needed.
 
-4. The whale portfolios and algorithmic portfolio CSV files contain daily returns, but the S&P 500 CSV file contains closing prices. Convert the S&P 500 closing prices to daily returns.
+4. The whale portfolios and algorithmic portfolio CSV files contain daily returns, but the S&P 500 CSV file contains closing prices. Converted the S&P 500 closing prices to daily returns.
 
-5. Join `Whale Returns`, `Algorithmic Returns`, and the `S&P 500 Returns` into a single DataFrame with columns for each portfolio's returns.
+5. Joined `Whale Returns`, `Algorithmic Returns`, and the `S&P 500 Returns` into a single DataFrame with columns for each portfolio's returns.
 
     ![returns-dataframe.png](Images/returns-dataframe.png)
 
 ### Conduct Quantitative Analysis
 
-Analyze the data to see if any of the portfolios outperform the stock market (i.e., the S&P 500).
+Analyzed the data to see if any of the portfolios outperform the stock market (i.e., the S&P 500).
 
 #### Performance Analysis
 
-1. Calculate and plot daily returns of all portfolios.
+1. Calculated and plot daily returns of all portfolios.
 
-2. Calculate and plot cumulative returns for all portfolios. Does any portfolio outperform the S&P 500?
+2. Calculated and plot cumulative returns for all portfolios. 
 
 #### Risk Analysis
 
-1. Create a box plot for each of the returns. 
+1. Created a box plot for each of the returns. 
 
-2. Calculate the standard deviation for each portfolio. 
+2. Calculated the standard deviation for each portfolio. 
 
-3. Determine which portfolios are riskier than the S&P 500.
+3. Determined which portfolios are riskier than the S&P 500.
 
-4. Calculate the Annualized Standard Deviation.
+4. Calculated the Annualized Standard Deviation.
 
 #### Rolling Statistics
 
-1. Calculate and plot the rolling standard deviation for all portfolios using a 21-day window.
+1. Calculated and plot the rolling standard deviation for all portfolios using a 21-day window.
 
-2. Calculate and plot the correlation between each stock to determine which portfolios may mimick the S&P 500.
+2. Calculated and plot the correlation between each stock to determine which portfolios may mimick the S&P 500.
 
-3. Choose one portfolio, then calculate and plot the 60-day rolling beta between it and the S&P 500.
+3. Chose one portfolio, then calculated and plot the 60-day rolling beta between it and the S&P 500.
 
-#### Rolling Statistics Challenge: Exponentially Weighted Average
 
 An alternative method to calculate a rolling window is to take the exponentially weighted moving average. This is like a moving window average, but it assigns greater importance to more recent observations. Try calculating the [`ewm`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.ewm.html) with a 21-day half-life.
 
 ### Sharpe Ratios
 
-Investment managers and their institutional investors look at the return-to-risk ratio, not just the returns. After all, if you have two portfolios that each offer a 10% return, yet one is lower risk, you would invest in the lower-risk portfolio, right?
 
-1. Using the daily returns, calculate and visualize the Sharpe ratios using a bar plot.
+1. Using the daily returns, calculated and visualized the Sharpe ratios using a bar plot.
 
-2. Determine whether the algorithmic strategies outperform both the market (S&P 500) and the whales portfolios.
+2. Determined whether the algorithmic strategies outperform both the market (S&P 500) and the whales portfolios.
 
-### Create a Custom Portfolio
+### Created a Custom Portfolio
 
 
-1. Visit [Google Sheets](https://docs.google.com/spreadsheets/) and use the built-in Google Finance function to choose 3-5 stocks for your portfolio.
+1. Visit [Google Sheets](https://docs.google.com/spreadsheets/) and used the built-in Google Finance function to choose 3-5 stocks for the portfolio.
 
-2. Download the data as CSV files and calculate the portfolio returns.
+2. Downloaded the data as CSV files and calculated the portfolio returns.
 
-3. Calculate the weighted returns for your portfolio, assuming equal number of shares per stock.
+3. Calculated the weighted returns for the portfolio, assuming equal number of shares per stock.
 
-4. Add your portfolio returns to the DataFrame with the other portfolios.
+4. Added portfolio returns to the DataFrame with the other portfolios.
 
-5. Run the following analyses:
+5. Ran the following analyses:
 
     * Calculate the Annualized Standard Deviation.
     * Calculate and plot rolling `std` with a 21-day window.
@@ -100,9 +96,8 @@ Investment managers and their institutional investors look at the return-to-risk
     * Calculate and plot beta for your portfolio compared to the S&P 60 TSX.
     * Calculate the Sharpe ratios and generate a bar plot.
 
-4. How does your portfolio do?
+4. How does the portfolio do?
 
-**Note:** In the Resources folder, you'll find CSV files for AAPL, COST and GOOG. These are provided as a backup in the event that the Google Finance function is not functioning properly.
 
 ---
 
